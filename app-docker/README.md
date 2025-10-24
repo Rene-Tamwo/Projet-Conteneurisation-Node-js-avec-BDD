@@ -47,7 +47,6 @@ Démarrage avec Docker Compose:
 1️⃣ Construire et lancer tous les conteneurs
 docker compose up --build
 
-
 Cela va :
 
 Démarrer une base de données PostgreSQL (db)
@@ -83,19 +82,19 @@ npm test
 Lors du build Docker, les tests unitaires et d’intégration sont exécutés automatiquement.
 
 Commandes utiles:
-Commande	                 Description
-docker compose up --build	 Lance l’application et la DB
-docker compose down -v	     Stoppe les conteneurs et supprime les volumes
-docker exec -it node_app sh	 Accède au shell du conteneur de l’app
-docker logs node_app	     Consulte les logs de l’application
+Commande	                    Description
+docker compose up --build	    Lance l’application et la DB
+docker compose down -v	      Stoppe les conteneurs et supprime les volumes
+docker exec -it node_app sh	  Accède au shell du conteneur de l’app
+docker logs node_app	        Consulte les logs de l’application
 
 Technologies utilisées:
-Outil	                  Rôle
+Outil	                    Rôle
 Node.js	                  Exécution du code JavaScript côté serveur
 Express.js	              Framework web minimaliste
 PostgreSQL	              Base de données relationnelle
 pg (node-postgres)	      Client PostgreSQL pour Node.js
-Jest	                  Framework de test
+Jest	                    Framework de test
 Docker / Docker Compose	  Conteneurisation et orchestration
 ESLint	                  Vérification de la qualité du code
 
@@ -108,4 +107,4 @@ tamwotagne@gmail.com
 
 Licence:
 Projet librement réutilisable à des fins d’apprentissage.
-© 2025 Tamwo René – Tous droits réservés.
+© 2025 René Tamwo – Tous droits réservés.

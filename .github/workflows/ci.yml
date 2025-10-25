@@ -37,21 +37,27 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: ./app-docker
         run: npm ci
 
       - name: Lint code
+        working-directory: ./app-docker
         run: npm run lint
 
       - name: Run unit tests
+        working-directory: ./app-docker
         run: npm run test:unit
 
       - name: Run integration tests
+        working-directory: ./app-docker
         run: npm run test:int
 
       - name: Run non-regression tests (snapshot)
+        working-directory: ./app-docker
         run: npm run test:unit
 
       - name: Generate code coverage report
+        working-directory: ./app-docker
         run: npm run test:coverage
 
       - name: Upload coverage report
@@ -61,7 +67,7 @@ jobs:
           path: coverage/
 
       - name: Build Docker image
-        run: docker build -t myapp:latest .
+        run: docker build -t myapp:latest ./app-docker
 
       - name: Run container to verify healthcheck
         run: |

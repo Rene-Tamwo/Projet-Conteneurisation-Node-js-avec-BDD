@@ -54,7 +54,7 @@ jobs:
 
       - name: Run non-regression tests (snapshot)
         working-directory: ./app-docker
-        run: npm run test:unit
+        run: npm run test:nonreg
 
       - name: Generate code coverage report
         working-directory: ./app-docker
